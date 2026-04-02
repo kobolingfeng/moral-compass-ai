@@ -22,11 +22,24 @@
 将 `skill/` 目录复制到你的 Cursor Skills 目录：
 
 ```bash
-# macOS / Linux
+# macOS
 cp -r skill/ ~/.cursor/skills/moral-legal-assessment/
 
-# Windows
+# Linux
+cp -r skill/ ~/.cursor/skills/moral-legal-assessment/
+
+# Windows (CMD)
 xcopy /E skill\ %USERPROFILE%\.cursor\skills\moral-legal-assessment\
+
+# Windows (PowerShell)
+Copy-Item -Recurse skill\ "$env:USERPROFILE\.cursor\skills\moral-legal-assessment\"
+```
+
+或者使用 `git clone` 后复制：
+
+```bash
+git clone https://github.com/kobolingfeng/moral-compass-ai.git
+cp -r moral-compass-ai/skill/ ~/.cursor/skills/moral-legal-assessment/
 ```
 
 之后在 Cursor 对话中直接问"帮我评测一下：[描述你的行为]"即可自动触发。
